@@ -1,5 +1,5 @@
 module.exports = {
-  type: 'INSTALLER',
+  type: 'PORTABLE',
   id: 'ContextMenuManager 设置',
   name: 'ContextMenuManager',
   backupConfigs: [
@@ -14,4 +14,7 @@ module.exports = {
       ],
     },
   ],
+  detect(list, env) {
+    return this.detectByAppData(list, env)
+  },
 }
